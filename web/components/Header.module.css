@@ -19,6 +19,7 @@
   font-weight: inherit;
   text-transform: uppercase;
   margin: 0;
+  margin-left: 1.5rem;
   padding: 0;
 
   @nest & > a {

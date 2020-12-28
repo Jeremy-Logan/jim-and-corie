@@ -84,7 +84,7 @@ class Header extends Component {
             as='/'
             prefetch
           >
-            <a title={title}>{this.renderLogo(logo)}</a>
+            <h1 title={title} style={{cursor: 'pointer'}}>Jim and Corie Adventures</h1>
           </Link>
         </h1>
         <nav className={styles.nav}>

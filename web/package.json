@@ -21,9 +21,11 @@
     "next-seo": "^1.11.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-images": "^1.1.7",
     "react-inlinesvg": "^0.8.4",
     "react-mailchimp-form": "^1.0.1",
-    "react-mailchimp-subscribe": "^2.1.0"
+    "react-mailchimp-subscribe": "^2.1.0",
+    "react-photo-gallery": "^8.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
