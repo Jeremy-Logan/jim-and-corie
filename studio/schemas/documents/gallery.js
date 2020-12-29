@@ -25,6 +25,12 @@ export default {
             title: 'Description',
             description: 'This description populates meta-tags on the webpage',
             fieldset: 'metadata'
+        },
+        { 
+            name: 'gallerySection',
+            type: 'gallerySection',
+            title: 'Gallery Section',
+            description: 'This section is for photos from a specific trip which happened in the year of this gallery.'
         }
     ],
 
