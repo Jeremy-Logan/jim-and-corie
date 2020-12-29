@@ -84,7 +84,7 @@ class Header extends Component {
             as='/'
             prefetch
           >
-            <h1 title={title} style={{cursor: 'pointer'}}>Jim and Corie Adventures</h1>
+            <h1 title={title} style={{cursor: 'pointer'}}>Jim and Corie's Adventures</h1>
           </Link>
         </h1>
         <nav className={styles.nav}>
