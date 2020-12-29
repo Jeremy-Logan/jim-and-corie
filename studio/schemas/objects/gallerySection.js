@@ -15,7 +15,7 @@ export default {
         },
         {
             name: 'image',
-            title: 'Image(s)'
+            title: 'Image(s)',
             type: 'array',
             of: [{type: image}]
         }
