@@ -28,9 +28,10 @@ export default {
         },
         { 
             name: 'gallerySection',
-            type: 'gallerySection',
             title: 'Gallery Section',
-            description: 'This section is for photos from a specific trip which happened in the year of this gallery.'
+            description: 'This section is for photos from a specific trip which happened in the year of this gallery.',
+            type: 'array',
+            of: [{ type: 'gallerySection'},],
         }
     ],
 
