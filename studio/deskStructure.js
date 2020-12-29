@@ -25,6 +25,11 @@ export default () =>
         .schemaType('page')
         .child(S.documentTypeList('page').title('Pages')),
       S.listItem()
+        .title('Galleries')
+        .icon(MdDashboard)
+        .schemaType('gallery')
+        .child(S.documentTypeList('gallery').title('Galleries')),
+      S.listItem()
         .title('Routes')
         .schemaType('route')
         .child(S.documentTypeList('route').title('Routes')),

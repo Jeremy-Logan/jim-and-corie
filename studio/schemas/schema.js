@@ -47,5 +47,6 @@ export default createSchema({
     siteConfig,
     textSection,
     gallerySection,
+    gallery,
   ]),
 });
