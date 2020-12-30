@@ -1,14 +1,14 @@
-import React, {useState, useCallback} from 'react'
-import {render} from 'react-dom'
+import React, { useState, useCallback } from 'react'
+import { render } from 'react-dom'
 import Gallery from 'react-photo-gallery'
-import Carousel, {Modal, ModalGateway} from 'react-images'
-import {photos} from './photos'
+import Carousel, { Modal, ModalGateway } from 'react-images'
+// import { photos } from './photos'
 
-function App () {
+const GallerySection = ()=> {
   const [currentImage, setCurrentImage] = useState(0)
   const [viewerIsOpen, setViewerIsOpen] = useState(false)
 
-  const openLightbox = useCallback((event, {photo, index}) => {
+  const openLightbox = useCallback((event, { photo, index }) => {
     setCurrentImage(index)
     setViewerIsOpen(true)
   }, [])
@@ -26,11 +26,11 @@ function App () {
           <Modal onClose={closeLightbox}>
             <Carousel
               currentIndex={currentImage}
-              views={photos.map((x) => ({
-                ...x,
-                srcset: x.srcSet,
-                caption: x.title
-              }))}
+            //   views={photos.map((x) => ({
+            //     ...x,
+            //     srcset: x.srcSet,
+            //     caption: x.title,
+            //   }))}
             />
           </Modal>
         ) : null}
@@ -38,4 +38,4 @@ function App () {
     </div>
   )
 }
-render(<App />, document.getElementById('app'))
+export default GallerySection

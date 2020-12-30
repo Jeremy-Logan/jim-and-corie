@@ -18,6 +18,10 @@ export default {
       name: 'slug',
       type: 'slug',
       title: 'Slug',
+      options: {
+        source: 'title',
+        maxLength: 96
+      
     },
     {
       name: 'image',
@@ -37,14 +41,14 @@ export default {
       description:
         'This section is for photos from a specific trip which happened in the year of this gallery.',
       type: 'array',
-      of: [{ type: 'gallerySection' }]
+      of: [{type: 'reference', to: {type: 'gallerySection'}}]
     }
   ],
 
   preview: {
     select: {
       title: 'title',
-      media: 'openGraphImage'
+      media: 'image'
     }
   }
 }

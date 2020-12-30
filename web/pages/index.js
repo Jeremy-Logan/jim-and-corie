@@ -1,21 +1,30 @@
-import PropTypes from 'prop-types'
-import React from 'react'
-import Layout from '../components/Layout'
+import Link from 'next/link'
+import groq from 'groq'
+import client from '../client'
 
-class IndexPage extends React.Component {
-  static propTypes = {
-    config: PropTypes.object
-  }
-
-  render () {
-    const {config} = this.props
-    return (
-      <Layout config={config}>
-        <h1>No route set</h1>
-        <h2>Setup automatic routes in sanity or custom routes in next.config.js</h2>
-      </Layout>
-    )
-  }
+function Index(props) {
+  const { galleries = [] } = props
+  return (
+    <div>
+      <h1>Welcome to a blog!</h1>
+      {galleries.map(
+        ({ _id, title = '', slug = '' }) =>
+          slug && (
+            <li key={_id}>
+              <Link prefetch href="/gallery/[slug]" as={`/gallery/${slug.current}`}>
+                <a>{title}</a>
+              </Link>{' '}
+            </li>
+          )
+      )}
+    </div>
+  )
 }
 
-export default IndexPage
+Index.getInitialProps = async () => ({
+  posts: await client.fetch(groq`
+    *[_type == "gallery" && publishedAt < now()]|order(publishedAt desc)
+  `),
+})
+
+export default Index
