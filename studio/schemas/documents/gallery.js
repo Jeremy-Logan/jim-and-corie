@@ -21,7 +21,7 @@ export default {
       options: {
         source: 'title',
         maxLength: 96
-      
+      }
     },
     {
       name: 'image',
@@ -41,7 +41,7 @@ export default {
       description:
         'This section is for photos from a specific trip which happened in the year of this gallery.',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'gallerySection'}}]
+      of: [{ type: 'reference', to: { type: 'gallerySection' } }]
     }
   ],
 

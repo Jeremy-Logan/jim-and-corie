@@ -7,7 +7,7 @@ function urlFor(source) {
 }
 
 const Gallery = (props) => {
-  const { title = 'Missing title', image = 'Missing image', description, authorImage } = props
+  const { title = 'Missing title', image = 'Missing image', description } = props
   return (
     <article>
       <h1>{title}</h1>
